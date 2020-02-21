@@ -13,7 +13,7 @@ jobs:
         node-version: 12.x
 
     - name: Create PDF
-      run: npx marp presentation.md --pdf
+      run: npx @marp-team/marp-cli presentation.md --pdf
 
     - name: Create Release
       id: create_release
