@@ -13,7 +13,11 @@ jobs:
         node-version: 12.x
 
     - name: Create PDF
-      run: npx @marp-team/marp-cli presentation.md --pdf
+      run: |
+        npx @marp-team/marp-cli presentation.md --pdf
+        git checkout --orphan gh-pages
+        git add presentation.pdf
+        git commit -m "new pdf"
 
     - name: Create Release
       id: create_release
