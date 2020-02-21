@@ -8,7 +8,7 @@ jobs:
       with:
         ref: refs/heads/master
 
-        - uses: actions/setup-node@master
+    - uses: actions/setup-node@master
       with:
         node-version: 12.x
 
